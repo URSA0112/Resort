@@ -25,7 +25,7 @@ export default function Home() {
       <About></About>
 
       {/* ACCOMMODATIONS */}
-      <Accomodation></Accomodation>Í
+      <Accomodation></Accomodation>
 
       {/* SERVICES */}
       <Services></Services>

@@ -1,9 +1,6 @@
 export default function About() {
     return (
-        <section className="about" id="about">
-
-
-
+        <section className="about xl:p-15 md:p-15" id="about">
 
             {/* 🔵 TEXT */}
             <div className="about-text">

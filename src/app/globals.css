@@ -13,9 +13,9 @@
   --white: #ffffff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -112,6 +112,7 @@ nav {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-top: 1rem;
 }
 
 .hero-bg {
@@ -241,7 +242,7 @@ nav {
 
 .hero-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-size: clamp(3.5rem, 5vw, 7rem);
   font-weight: 300;
   line-height: 1;
   letter-spacing: 0.02em;
@@ -254,7 +255,8 @@ nav {
   font-style: italic;
   color: var(--gold);
   display: block;
-  font-size: 0.85em;
+  font-size: 0.6em;
+  margin-top: 1rem;
 }
 
 .hero-subtitle {
@@ -272,7 +274,7 @@ nav {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   opacity: 0;
   animation: fadeUp 0.8s 0.9s forwards;
 }
@@ -310,7 +312,6 @@ nav {
   border-color: var(--gold);
   color: var(--gold);
 }
-
 
 .scroll-line {
   width: 1px;
@@ -389,9 +390,6 @@ nav {
 }
 
 /* SECTIONS */
-section {
-  padding: 8rem 4rem;
-}
 
 .section-tag {
   font-size: 0.65rem;

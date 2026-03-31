@@ -1,103 +1,166 @@
-export default function Accomodation() {
+export default function Accommodation() {
+    const GOLD = "text-amber-400";
+    const BORDER = "border-amber-400/20";
+    const BG = "bg-amber-400/5";
+
+    const rooms = [
+        {
+            type: "Standard Ger",
+            name: "Classic Room",
+            size: 20,
+            guests: "1-2 persons",
+            count: 8,
+            price: "₮700,000",
+            usd: "≈ USD 195",
+            featured: false,
+            badge: null,
+        },
+        {
+            type: "Deluxe Ger",
+            name: "Family Room",
+            size: 45,
+            guests: "3–4 persons",
+            count: 6,
+            price: "₮900,000",
+            usd: "≈ USD 250",
+            featured: false,
+            badge: null,
+        },
+        {
+            type: "Superior Ger",
+            name: "Group Room",
+            size: 57,
+            guests: "4–6 persons",
+            count: 3,
+            price: "₮1,200,000",
+            usd: "≈ USD 335",
+            featured: false,
+            badge: null,
+        },
+        {
+            type: "Presidential",
+            name: "The Khan Suite",
+            size: 57,
+            guests: "Up to 2 persons",
+            count: 1,
+            price: "₮1,500,000",
+            usd: "≈ USD 420",
+            featured: true,
+            badge: "Suite",
+        },
+    ];
+
     return (
-        <section className="accommodations" id="accommodations">
-            <div className="acc-header">
+        <section id="accommodations" className="w-full flex flex-col gap-3 py-28 px-6 md:px-16 text-white ">
+
+            {/* Header */}
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-5 ">
                 <div>
-                    <span className="section-tag">Where You Stay</span>
-                    <h2 className="section-title">Curated<br /><em>Retreats</em></h2>
+                    <span className={`block text-xs tracking-[0.35em] uppercase mb-4 ${GOLD}`}>
+                        Where You Stay
+                    </span>
+
+                    <h2 className="font-serif text-[clamp(2.5rem,4vw,3.5rem)] leading-tight">
+                        Curated <br />
+                        <em className={`not-italic ${GOLD}`}>Rooms</em>
+                    </h2>
                 </div>
-                <p className="section-body" style={{ maxWidth: '320px' }}>
-                    Each accommodation has been carefully designed to frame the landscape
-                    and provide an intimate connection with the Mongolian wilderness.
+
+                <p className="max-w-md text-sm leading-relaxed text-white/60 ">
+                    Each room has been thoughtfully designed to offer comfort and warmth
+                    in the heart of the Mongolian wilderness.
                 </p>
             </div>
-            <div className="acc-grid">
-                {/* Featured card */}
-                <div className="acc-card featured">
-                    <div className="acc-img">
-                        <div className="acc-img-bg acc-img-1" />
-                        <svg style={{ position: 'relative', zIndex: 1 }} width="100" height="100" viewBox="0 0 100 100" fill="none">
-                            <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(201,169,110,0.15)" strokeWidth="1" />
-                            <polygon points="50,20 65,45 80,55 65,65 50,80 35,65 20,55 35,45" fill="none" stroke="rgba(201,169,110,0.2)" strokeWidth="0.5" />
-                            <circle cx="50" cy="50" r="8" fill="rgba(201,169,110,0.1)" stroke="rgba(201,169,110,0.4)" strokeWidth="1" />
-                        </svg>
-                    </div>
-                    <div className="acc-badge">Signature</div>
-                    <div className="acc-info">
-                        <span className="acc-type">Presidential Suite</span>
-                        <div className="acc-name">The Khan Ger</div>
-                        <p className="acc-desc">
-                            Our finest accommodation — a double-ger suite with private terrace overlooking
-                            Khövsgöl Lake. Features handcrafted furniture, heated floors, and a private butler.
-                        </p>
-                        <div className="acc-amenities">
-                            <span className="amenity-tag">Lake View</span>
-                            <span className="amenity-tag">Butler Service</span>
-                            <span className="amenity-tag">Private Terrace</span>
-                            <span className="amenity-tag">Heated Floors</span>
-                            <span className="amenity-tag">Fireplace</span>
-                        </div>
-                        <div className="acc-price">
-                            <span className="price-num">₮890,000</span>
-                            <span className="price-label">/ night (≈ USD 250)</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="acc-card">
-                    <div className="acc-img"><div className="acc-img-bg acc-img-2" /></div>
-                    <div className="acc-info">
-                        <span className="acc-type">Deluxe Ger</span>
-                        <div className="acc-name">Steppe Suite</div>
-                        <p className="acc-desc">Panoramic meadow views, king bed, wood-burning stove, and en-suite bath with local stone details.</p>
-                        <div className="acc-amenities">
-                            <span className="amenity-tag">Panoramic View</span>
-                            <span className="amenity-tag">King Bed</span>
-                            <span className="amenity-tag">En-Suite</span>
-                        </div>
-                        <div className="acc-price">
-                            <span className="price-num">₮490,000</span>
-                            <span className="price-label">/ night (≈ USD 140)</span>
-                        </div>
-                    </div>
-                </div>
+            {/* Breakfast note */}
+            <div className={`flex items-center gap-3 text-sm mb-14 ${GOLD}`}>
+                <span className={`flex items-center justify-center w-5 h-5 border   rounded-full text-[10px] ${BORDER}`}>
+                    ✓
+                </span>
+                All rooms include breakfast
+            </div>
 
-                <div className="acc-card">
-                    <div className="acc-img"><div className="acc-img-bg acc-img-3" /></div>
-                    <div className="acc-info">
-                        <span className="acc-type">Classic Ger</span>
-                        <div className="acc-name">Forest Ger</div>
-                        <p className="acc-desc">Nestled among birch trees with traditional decor, double beds, and shared heated bathing facilities.</p>
-                        <div className="acc-amenities">
-                            <span className="amenity-tag">Forest Setting</span>
-                            <span className="amenity-tag">Twin Beds</span>
-                            <span className="amenity-tag">Traditional</span>
-                        </div>
-                        <div className="acc-price">
-                            <span className="price-num">₮280,000</span>
-                            <span className="price-label">/ night (≈ USD 80)</span>
-                        </div>
-                    </div>
-                </div>
+            {/* Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-[-30]">
+                {rooms.map((room) => (
+                    <div
+                        key={room.name}
+                        className={`
+              flex flex-col h-full p-7 rounded-2xl transition-all duration-300
+              border ${BORDER}
+              ${room.featured ? BG : "hover:bg-white/5"}
+            `}
+                    >
 
-                <div className="acc-card">
-                    <div className="acc-img"><div className="acc-img-bg acc-img-4" /></div>
-                    <div className="acc-info">
-                        <span className="acc-type">Family Package</span>
-                        <div className="acc-name">Nomad Compound</div>
-                        <p className="acc-desc">Two interconnected gers for families — a master suite and children&apos;s ger with games and storytelling area.</p>
-                        <div className="acc-amenities">
-                            <span className="amenity-tag">Family</span>
-                            <span className="amenity-tag">2 Gers</span>
-                            <span className="amenity-tag">Children&apos;s Area</span>
+                        {/* Badge */}
+                        {room.badge && (
+                            <span className={`absolute top-5 right-5 text-[10px] tracking-[0.2em] uppercase px-2 py-1 border ${BORDER} ${GOLD}`}>
+                                {room.badge}
+                            </span>
+                        )}
+
+                        {/* Type + Name */}
+                        <div className="space-y-2">
+                            <span className={`text-[15px] tracking-[0.2em] uppercase text-xl ${GOLD}`}>
+                                {room.name}
+                            </span>
                         </div>
-                        <div className="acc-price">
-                            <span className="price-num">₮750,000</span>
-                            <span className="price-label">/ night (≈ USD 210)</span>
+
+                        {/* Size */}
+                        <div className="font-serif text-4xl mt-3">
+                            {room.size}
+                            <span className="text-base opacity-50 ml-1">m²</span>
                         </div>
+
+                        {/* Divider */}
+                        <div className={`h-px my-2 ${BORDER}`} />
+
+                        {/* Meta */}
+                        <div className="space-y-3 text-sm">
+                            <div className="flex justify-between">
+                                <span className="text-white/60">Guests</span>
+                                <span>{room.guests}</span>
+                            </div>
+
+                            <div className="flex justify-between items-center  ">
+                                <span className="text-white/60">Available</span>
+                                <span className={`px-3 py-1 text-xs border ${BORDER} ${BG} ${GOLD}`}>
+                                    {room.count} {room.count === 1 ? "room" : "rooms"}
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Price */}
+                        <div className={`mt-auto pt-6 border-t ${BORDER} space-y-3 flex flex-col gap-2`}>
+                            <div className="font-serif text-2xl">
+                                {room.price}
+                            </div>
+
+                            <div className="text-xs text-white/50">
+                                per night · {room.usd}
+                            </div>
+
+                            <div className={`flex items-center gap-2 text-xs ${GOLD}`}>
+                                <span className={`flex items-center justify-center w-5 h-5 border rounded-full text-[10px] ${BORDER}`}>
+                                    ✓
+                                </span>
+                                Breakfast included
+                            </div>
+
+                            {/* CTA Button */}
+                            <button className="
+                mt-5 w-full py-3 text-sm tracking-wider uppercase
+                border border-amber-400 text-amber-400 rounded-md
+                hover:bg-amber-400 hover:text-black
+                transition-all duration-300
+              ">
+                                Book Room
+                            </button>
+                        </div>
+
                     </div>
-                </div>
+                ))}
             </div>
         </section>
-    )
+    );
 }
