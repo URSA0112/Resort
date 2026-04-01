@@ -1,3 +1,5 @@
+import BookingButton from "./bookingBtn";
+
 export default function Accommodation() {
     const GOLD = "text-amber-400";
     const BORDER = "border-amber-400/20";
@@ -147,15 +149,16 @@ export default function Accommodation() {
                                 Breakfast included
                             </div>
 
+                            <BookingButton></BookingButton>
                             {/* CTA Button */}
-                            <button className="
+                            {/* <button className="
                 mt-5 w-full py-3 text-sm tracking-wider uppercase
                 border border-amber-400 text-amber-400 rounded-md
                 hover:bg-amber-400 hover:text-black
                 transition-all duration-300
               ">
                                 Book Room
-                            </button>
+                            </button> */}
                         </div>
 
                     </div>

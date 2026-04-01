@@ -1024,12 +1024,21 @@ nav {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(201, 169, 110, 0.1);
-  margin: 4rem 0;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 3rem;
 }
 
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .contact-item {
   background: var(--dark-2);
   padding: 2.5rem;
@@ -1261,4 +1270,12 @@ footer {
   .gallery-strip {
     overflow-x: auto;
   }
+}
+.map-frame {
+  width: 100%;
+  min-height: 500px;
+  height: 500px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 169, 110, 0.2);
 }

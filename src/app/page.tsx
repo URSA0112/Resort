@@ -31,10 +31,10 @@ export default function Home() {
       <Services></Services>
 
       {/* EXPERIENCES */}
-      <Experiences></Experiences>
+      {/* <Experiences></Experiences> */}
 
       {/* GALLERY */}
-      <Gallery></Gallery>
+      {/* <Gallery></Gallery> */}
 
       {/* LOCATION */}
 
