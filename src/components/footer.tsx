@@ -3,15 +3,33 @@ export default function Footer() {
         <footer className="footer">
             <style>{`
                 .footer {
-                    background: radial-gradient(circle at top, #111 0%, #0a0a09 100%);
-                    color: #d6d0c4;
-                    padding: 6rem 1.5rem 2.5rem;
-                    font-family: 'Georgia', serif;
+                    position: relative;
+                    background-image: url('/2.png');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    color: #f5f0e8;
+                }
+
+                /* Dark overlay */
+                .footer::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(
+                        to top,
+                        rgba(0,0,0,0.9) 20%,
+                        rgba(0,0,0,0.7) 50%,
+                        rgba(0,0,0,0.4) 100%
+                    );
                 }
 
                 .footer-inner {
+                    position: relative;
+                    z-index: 2;
                     max-width: 1100px;
                     margin: 0 auto;
+                    padding: 6rem 1.5rem 3rem;
                     display: grid;
                     grid-template-columns: 1.8fr 1fr 1fr;
                     gap: 4rem;
@@ -24,12 +42,8 @@ export default function Footer() {
                     }
                 }
 
-                .footer-brand {
-                    max-width: 360px;
-                }
-
                 .footer-logo {
-                    font-size: 0.95rem;
+                    font-size: 1rem;
                     letter-spacing: 0.35em;
                     color: #C9A96E;
                     margin-bottom: 1.5rem;
@@ -39,7 +53,8 @@ export default function Footer() {
                 .footer-tagline {
                     font-size: 0.95rem;
                     line-height: 1.8;
-                    color: #a8a090;
+                    color: rgba(245,240,232,0.8);
+                    max-width: 360px;
                 }
 
                 .footer-col h5 {
@@ -50,69 +65,45 @@ export default function Footer() {
                     margin-bottom: 1.5rem;
                 }
 
-                .footer-col ul {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-                }
-
                 .footer-col li {
                     font-size: 0.9rem;
-                    color: #b8b1a4;
-                    margin-bottom: 0.8rem;
-                    opacity: 0.8;
+                    margin-bottom: 0.7rem;
+                    opacity: 0.85;
                 }
 
                 .footer-contact {
                     margin-top: 2rem;
                     font-size: 0.9rem;
-                    color: #b8b1a4;
                     line-height: 1.8;
-                }
-
-                .footer-contact span {
-                    display: block;
+                    opacity: 0.85;
                 }
 
                 .footer-bottom {
-                    margin-top: 4rem;
-                    padding-top: 1.5rem;
-                    border-top: 1px solid rgba(201,169,110,0.12);
+                    position: relative;
+                    z-index: 2;
                     text-align: center;
+                    padding: 1.5rem;
                     font-size: 0.75rem;
-                    color: #7e786b;
-                    letter-spacing: 0.05em;
+                    color: rgba(245,240,232,0.6);
+                    border-top: 1px solid rgba(255,255,255,0.1);
                 }
             `}</style>
 
             <div className="footer-inner">
 
                 {/* Brand */}
-                <div className="footer-brand">
+                <div>
                     <span className="footer-logo">MARUSH HOTEL & RESORT</span>
-
                     <p className="footer-tagline">
-                        A quiet retreat set within the open landscapes of Töv Province —
-                        where simplicity, space, and comfort come together in refined balance.
+                        A refined escape set within the landscapes of Töv Province —
+                        where nature, stillness, and comfort meet.
                     </p>
 
-                    {/* Minimal Contact (NOT clickable heavy) */}
                     <div className="footer-contact">
                         <span>+976 9100 6969</span>
                         <span>sondorekh@gmail.com</span>
-                        <span>Üdeligiin Dugan · Töv Province · Mongolia</span>
+                        <span>Üdeligiin Dugan · Mongolia</span>
                     </div>
-                </div>
-
-                {/* Experience */}
-                <div className="footer-col">
-                    <h5>Experience</h5>
-                    <ul>
-                        <li>Nature & Landscape</li>
-                        <li>Horse Riding</li>
-                        <li>Wellness & Spa</li>
-                        <li>Seasonal Retreats</li>
-                    </ul>
                 </div>
 
                 {/* Stay */}
@@ -125,9 +116,18 @@ export default function Footer() {
                     </ul>
                 </div>
 
+                {/* Experience */}
+                <div className="footer-col">
+                    <h5>Experience</h5>
+                    <ul>
+                        <li>Nature & Landscape</li>
+                        <li>Horse Riding</li>
+                        <li>Wellness & Spa</li>
+                    </ul>
+                </div>
+
             </div>
 
-            {/* Bottom */}
             <div className="footer-bottom">
                 © 2026 Marush Hotel & Resort · Mongolia
             </div>
