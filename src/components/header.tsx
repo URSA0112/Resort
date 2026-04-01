@@ -13,7 +13,7 @@ export default function Header() {
                     <li><a href="#location">Location</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <a href="#contact" className="nav-cta">Reserve Now</a>
+                <a href="#contact" className="nav-cta m-1 rounded-1xl">Reserve Now</a>
             </nav>
         </>
     )
