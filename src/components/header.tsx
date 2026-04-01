@@ -9,7 +9,7 @@ export default function Header() {
                     <li><a href="#about">About</a></li>
                     <li><a href="#accommodations">Stays</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#experiences">Experiences</a></li>
+                    {/* <li><a href="#experiences">Experiences</a></li> */}
                     <li><a href="#location">Location</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
