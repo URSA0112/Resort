@@ -1,10 +1,10 @@
 export default function Hero() {
     return (
         <section className="hero" id="home" >
-            <div className="absolute inset-0 z-1 opacity-25">
+            <div className="absolute inset-0 z-1 opacity-50">
                 <img
                     src="/2-2.png"
-                    alt="hero"
+                    alt="Marush Resort lodge exterior"
                     className="w-full h-full object-cover"
                 />
             </div>

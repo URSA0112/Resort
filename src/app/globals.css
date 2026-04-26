@@ -1279,3 +1279,331 @@ footer {
   overflow: hidden;
   border: 1px solid rgba(201, 169, 110, 0.2);
 }
+
+/* MODAL ANIMATION */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* BOOKING MODAL — override global input styles */
+.booking-modal input,
+.booking-modal select,
+.booking-modal textarea {
+  background: #0f0f0f !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.8rem !important;
+  color: var(--cream) !important;
+  width: 100%;
+  transition: border-color 0.2s, background 0.2s !important;
+}
+
+.booking-modal input:focus,
+.booking-modal select:focus,
+.booking-modal textarea:focus {
+  background: #0a0a0a !important;
+  border-color: rgba(201, 169, 110, 0.35) !important;
+}
+
+.booking-modal textarea {
+  resize: none !important;
+  height: auto !important;
+}
+
+.booking-modal .input-error,
+.resort-form .input-error {
+  border-color: rgba(239, 68, 68, 0.5) !important;
+}
+
+.booking-modal input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+  cursor: pointer;
+}
+
+/* RESORT FORM (ApplicationForm) */
+.resort-form input,
+.resort-form select,
+.resort-form textarea {
+  background: var(--dark-3) !important;
+  border: 1px solid rgba(201, 169, 110, 0.12) !important;
+  border-radius: 0.4rem !important;
+  padding: 0.9rem 1.1rem !important;
+  font-size: 0.82rem !important;
+  color: var(--cream) !important;
+  width: 100%;
+  transition: border-color 0.25s, background 0.25s !important;
+}
+
+.resort-form input:focus,
+.resort-form select:focus,
+.resort-form textarea:focus {
+  background: var(--dark-2) !important;
+  border-color: rgba(201, 169, 110, 0.35) !important;
+}
+
+.resort-form textarea {
+  resize: vertical !important;
+  height: auto !important;
+  min-height: 120px !important;
+}
+
+.resort-form input[type="file"] {
+  padding: 0.7rem 1rem !important;
+  cursor: pointer;
+}
+
+.resort-form input[type="file"]::file-selector-button {
+  background: rgba(201, 169, 110, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  padding: 0.3rem 0.9rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-right: 0.8rem;
+  font-family: "Jost", sans-serif;
+  border-radius: 3px;
+}
+
+.resort-form input[type="file"]::file-selector-button:hover {
+  background: rgba(201, 169, 110, 0.22);
+}
+
+.form-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-error {
+  font-size: 0.65rem;
+  color: rgba(239, 68, 68, 0.8);
+  margin-top: 0.3rem;
+}
+
+/* CAREERS PAGE */
+.careers-hero {
+  background: var(--dark);
+}
+
+.careers-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 25% 40%, rgba(201, 169, 110, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 60%, rgba(80, 120, 160, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #0e1012 0%, #131b22 50%, #0e1012 100%);
+}
+
+.careers-hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(201, 169, 110, 0.03) 80px),
+    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201, 169, 110, 0.03) 80px);
+}
+
+/* RESPONSIVE CAREERS */
+@media (max-width: 900px) {
+  .careers-hero {
+    padding: 8rem 1.5rem 5rem;
+  }
+}
+
+/* NAV SCROLLED STATE */
+.nav-scrolled {
+  background: rgba(14, 16, 18, 0.98) !important;
+  border-bottom-color: rgba(201, 169, 110, 0.2) !important;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 6px;
+  z-index: 101;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--cream);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger-open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger-open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-cta-desktop {
+    display: none;
+  }
+}
+
+/* MOBILE NAV OVERLAY */
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+  background: rgba(8, 9, 10, 0.5);
+  backdrop-filter: blur(4px);
+  animation: menuFadeIn 0.2s ease forwards;
+}
+
+.mobile-nav-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(340px, 85vw);
+  z-index: 99;
+  background: var(--dark-2);
+  border-left: 1px solid rgba(201, 169, 110, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 3rem;
+  animation: panelSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  overflow-y: auto;
+}
+
+.mobile-nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.mobile-nav-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 1.1rem;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+
+.mobile-nav-close:hover {
+  color: var(--gold);
+}
+
+.mobile-nav-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(201, 169, 110, 0.12);
+  margin: 1.5rem 0;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.mobile-nav-link {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+  text-decoration: none;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.06);
+  opacity: 0;
+  transform: translateX(20px);
+  animation: linkSlideIn 0.35s ease forwards;
+  transition: color 0.2s;
+}
+
+.mobile-nav-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-link:hover {
+  color: var(--gold);
+}
+
+.mobile-nav-cta {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+@keyframes menuFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes panelSlideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes linkSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ABOUT SECTION IMAGE OVERLAYS */
+.about-img-main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(14, 16, 18, 0.35) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.about-img-accent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 16, 18, 0.2) 0%,
+    rgba(14, 16, 18, 0.5) 100%
+  );
+  pointer-events: none;
+}
