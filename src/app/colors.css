@@ -1,0 +1,36 @@
+/* ─────────────────────────────────────────────────────────────
+   Marush Resort — Design Token File
+   Edit this file to retheme the entire site.
+   Colors defined here generate Tailwind utilities automatically:
+     --color-gold  →  bg-gold / text-gold / border-gold / border-gold/20 …
+   ───────────────────────────────────────────────────────────── */
+
+@theme {
+  /* ── Backgrounds (darkest → lightest) ── */
+  --color-abyss:        #060D0A;   /* deepest dark: form input backgrounds */
+  --color-forest-black: #0A0F0D;   /* page body / base background */
+  --color-forest-deep:  #0F2A23;   /* cards, side panels, footer */
+  --color-forest-mid:   #1A3A33;   /* highlighted / accent sections */
+
+  /* ── Brand gold ── */
+  --color-gold:         #C6A46C;   /* primary gold accent (borders, icons, CTAs) */
+  --color-champagne:    #E8D8B5;   /* lighter gold for hover states */
+
+  /* ── Text ── */
+  --color-ivory:        #F5F1E8;   /* primary headings & body text */
+  --color-stone:        #9CA3AF;   /* muted / secondary text */
+
+  /* ── Custom transition durations (fixes non-standard Tailwind values) ── */
+  --duration-350:       350ms;
+  --duration-400:       400ms;
+}
+
+/* ── Shadow design tokens ─────────────────────────────────────
+   Usage in components:  shadow-[var(--glow-gold-btn)]
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --glow-gold-btn:  0 0 32px rgba(198, 164, 108, 0.40);  /* gold CTA button glow */
+  --glow-gold-card: 0 0 40px rgba(198, 164, 108, 0.10);  /* featured card halo */
+  --shadow-dark-sm: 0 8px 32px rgba(0, 0, 0, 0.35);      /* hover lift shadow */
+  --shadow-dark-md: 0 0 60px rgba(0, 0, 0, 0.40);        /* map / deep shadow */
+}

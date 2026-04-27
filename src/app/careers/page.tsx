@@ -90,12 +90,12 @@ export default function CareersPage() {
                 </div>
                 <div className="careers-hero-bg" style={{ zIndex: 1 }} />
                 <div className="relative z-10 text-center px-6 max-w-4xl mx-auto" style={{ zIndex: 2 }}>
-                    <span className="block text-xs tracking-[0.5em] uppercase text-amber-400 mb-6 opacity-0 [animation:fadeUp_0.8s_0.3s_forwards]">
+                    <span className="block text-xs tracking-[0.5em] uppercase text-gold mb-6 opacity-0 [animation:fadeUp_0.8s_0.3s_forwards]">
                         Join Our Team
                     </span>
                     <h1 className="font-serif text-[clamp(3rem,6vw,6rem)] font-light leading-[1.05] text-white opacity-0 [animation:fadeUp_0.8s_0.5s_forwards]">
                         Build Something<br />
-                        <em className="italic text-amber-400">Beautiful</em>
+                        <em className="italic text-gold">Beautiful</em>
                     </h1>
                     <p className="mt-6 text-sm font-light tracking-wide leading-relaxed text-white/50 max-w-lg mx-auto opacity-0 [animation:fadeUp_0.8s_0.7s_forwards]">
                         Marush Resort is more than a workplace — it's a community rooted in Mongolian heritage,
@@ -107,13 +107,13 @@ export default function CareersPage() {
                     </div>
                 </div>
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40" style={{ zIndex: 2 }}>
-                    <span className="text-[9px] tracking-[0.3em] uppercase text-amber-400">Scroll</span>
+                    <span className="text-[9px] tracking-[0.3em] uppercase text-gold">Scroll</span>
                     <div className="scroll-line" />
                 </div>
             </section>
 
             {/* COMPANY CULTURE */}
-            <section className="bg-[var(--dark-2)] py-28 px-6 md:px-16">
+            <section className="bg-forest-deep py-28 px-6 md:px-16">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
@@ -135,10 +135,10 @@ export default function CareersPage() {
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {culture.map(item => (
-                                <div key={item.title} className="p-6 border border-amber-400/10 bg-[var(--dark-3)] rounded-xl hover:border-amber-400/25 transition-all duration-300">
+                                <div key={item.title} className="p-6 border border-gold/10 bg-forest-mid rounded-xl hover:border-gold/25 transition-all duration-300">
                                     <span className="text-2xl mb-3 block">{item.icon}</span>
                                     <h4 className="text-sm font-medium tracking-wide text-white mb-2">{item.title}</h4>
-                                    <p className="text-xs text-[var(--muted)] leading-relaxed">{item.desc}</p>
+                                    <p className="text-xs text-stone leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -147,7 +147,7 @@ export default function CareersPage() {
             </section>
 
             {/* JOB LISTINGS */}
-            <section id="openings" className="bg-[var(--dark)] py-28 px-6 md:px-16">
+            <section id="openings" className="bg-forest-black py-28 px-6 md:px-16">
                 <div className="max-w-6xl mx-auto">
                     <div className="mb-14">
                         <span className="section-tag">Open Positions</span>
@@ -161,27 +161,27 @@ export default function CareersPage() {
                         {jobs.map(job => (
                             <div
                                 key={job.id}
-                                className="group flex flex-col p-7 border border-amber-400/15 bg-[var(--dark-2)] rounded-2xl hover:border-amber-400/35 hover:bg-[var(--dark-3)] transition-all duration-300"
+                                className="group flex flex-col p-7 border border-gold/15 bg-forest-deep rounded-2xl hover:border-gold/35 hover:bg-forest-mid transition-all duration-300"
                             >
                                 <div className="flex items-start justify-between gap-3 mb-4">
                                     <div>
-                                        <span className="text-[10px] tracking-[0.3em] uppercase text-amber-400/70 block mb-1">{job.department}</span>
+                                        <span className="text-[10px] tracking-[0.3em] uppercase text-gold/70 block mb-1">{job.department}</span>
                                         <h3 className="font-serif text-lg text-white leading-tight">{job.title}</h3>
                                     </div>
-                                    <span className="flex-shrink-0 text-[10px] tracking-wide uppercase px-2.5 py-1 border border-amber-400/20 text-amber-400/70 rounded-full whitespace-nowrap">
+                                    <span className="flex-shrink-0 text-[10px] tracking-wide uppercase px-2.5 py-1 border border-gold/20 text-gold/70 rounded-full whitespace-nowrap">
                                         {job.type}
                                     </span>
                                 </div>
 
-                                <p className="text-xs text-[var(--muted)] leading-relaxed flex-1 mb-5">{job.description}</p>
+                                <p className="text-xs text-stone leading-relaxed flex-1 mb-5">{job.description}</p>
 
                                 <div className="flex items-center justify-between">
-                                    <span className="text-[10px] text-[var(--muted)] flex items-center gap-1.5">
-                                        <span className="text-amber-400">📍</span>{job.location}
+                                    <span className="text-[10px] text-stone flex items-center gap-1.5">
+                                        <span className="text-gold">📍</span>{job.location}
                                     </span>
                                     <a
                                         href="#apply"
-                                        className="text-[10px] tracking-[0.2em] uppercase text-amber-400 border border-amber-400/30 px-4 py-2 rounded-full hover:bg-amber-400 hover:text-black transition-all duration-300"
+                                        className="text-[10px] tracking-[0.2em] uppercase text-gold border border-gold/30 px-4 py-2 rounded-full hover:bg-gold hover:text-forest-black transition-all duration-300"
                                     >
                                         Apply
                                     </a>
@@ -193,7 +193,7 @@ export default function CareersPage() {
             </section>
 
             {/* BENEFITS */}
-            <section className="bg-[var(--dark-3)] py-28 px-6 md:px-16">
+            <section className="bg-forest-mid py-28 px-6 md:px-16">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="section-tag">Why Marush</span>
@@ -204,11 +204,11 @@ export default function CareersPage() {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                         {benefits.map(b => (
-                            <div key={b.title} className="flex gap-5 p-6 border border-amber-400/10 bg-[var(--dark-2)] rounded-xl hover:border-amber-400/25 transition-all duration-300">
+                            <div key={b.title} className="flex gap-5 p-6 border border-gold/10 bg-forest-deep rounded-xl hover:border-gold/25 transition-all duration-300">
                                 <span className="text-3xl flex-shrink-0">{b.icon}</span>
                                 <div>
                                     <h4 className="text-sm font-medium tracking-wide text-white mb-1.5">{b.title}</h4>
-                                    <p className="text-xs text-[var(--muted)] leading-relaxed">{b.desc}</p>
+                                    <p className="text-xs text-stone leading-relaxed">{b.desc}</p>
                                 </div>
                             </div>
                         ))}
@@ -217,7 +217,7 @@ export default function CareersPage() {
             </section>
 
             {/* APPLICATION FORM */}
-            <section id="apply" className="bg-[var(--dark-2)] py-28 px-6 md:px-16">
+            <section id="apply" className="bg-forest-deep py-28 px-6 md:px-16">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-14">
                         <span className="section-tag">Apply Now</span>

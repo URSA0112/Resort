@@ -86,7 +86,7 @@ export default function BookingButton({ roomName, roomType, size, price, priceNu
         <div className="relative">
             <button
                 onClick={() => setOpen(true)}
-                className="mt-5 w-full py-3 text-sm tracking-[0.2em] uppercase border border-amber-400 text-amber-400 rounded-md hover:bg-amber-400 hover:text-black transition-all duration-300"
+                className="mt-5 w-full py-3 text-sm tracking-[0.2em] uppercase border border-gold text-gold rounded-md hover:bg-gold hover:text-forest-black transition-all duration-300"
             >
                 Book Room
             </button>
@@ -96,27 +96,27 @@ export default function BookingButton({ roomName, roomType, size, price, priceNu
                     className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/80 backdrop-blur-sm p-0 sm:p-4"
                     onClick={e => e.target === e.currentTarget && handleClose()}
                 >
-                    <div className="booking-modal relative w-full sm:max-w-lg bg-neutral-950 border border-amber-400/20 sm:rounded-2xl rounded-t-2xl shadow-[0_0_80px_rgba(201,169,110,0.1)] max-h-[94vh] flex flex-col [animation:modalIn_0.3s_ease_forwards]">
+                    <div className="booking-modal relative w-full sm:max-w-lg bg-abyss border border-gold/20 sm:rounded-2xl rounded-t-2xl shadow-[0_0_80px_rgba(200,174,122,0.1)] max-h-[94vh] flex flex-col [animation:modalIn_0.3s_ease_forwards]">
 
                         {/* Header */}
                         <div className="px-6 pt-6 pb-4 border-b border-white/5 flex-shrink-0">
                             <button
                                 onClick={handleClose}
-                                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-neutral-500 hover:text-amber-400 transition text-base"
+                                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-neutral-500 hover:text-gold transition text-base"
                                 aria-label="Close"
                             >✕</button>
 
-                            <span className="text-[10px] tracking-[0.35em] uppercase text-amber-400">Reserve · Marush Resort</span>
+                            <span className="text-[10px] tracking-[0.35em] uppercase text-gold">Reserve · Marush Resort</span>
                             <h2 className="font-serif text-xl text-white mt-1">{roomName}</h2>
 
                             <div className="flex flex-wrap gap-2 mt-2">
-                                <span className="text-[10px] tracking-widest uppercase text-neutral-500 border border-amber-400/15 px-2 py-0.5 rounded">{roomType}</span>
-                                <span className="text-[10px] tracking-widest uppercase text-neutral-500 border border-amber-400/15 px-2 py-0.5 rounded">{size} m²</span>
+                                <span className="text-[10px] tracking-widest uppercase text-neutral-500 border border-gold/15 px-2 py-0.5 rounded">{roomType}</span>
+                                <span className="text-[10px] tracking-widest uppercase text-neutral-500 border border-gold/15 px-2 py-0.5 rounded">{size} m²</span>
                             </div>
 
                             <div className="flex flex-wrap gap-x-4 gap-y-1.5 mt-3">
                                 {amenities.map(a => (
-                                    <span key={a.label} className="text-[10px] text-amber-400/60 flex items-center gap-1.5">
+                                    <span key={a.label} className="text-[10px] text-gold/60 flex items-center gap-1.5">
                                         <span>{a.icon}</span>{a.label}
                                     </span>
                                 ))}
@@ -125,7 +125,7 @@ export default function BookingButton({ roomName, roomType, size, price, priceNu
                             {step < 3 && (
                                 <div className="flex gap-1.5 mt-4">
                                     {([1, 2] as const).map(s => (
-                                        <div key={s} className={`h-0.5 flex-1 rounded-full transition-all duration-500 ${step >= s ? 'bg-amber-400' : 'bg-white/10'}`} />
+                                        <div key={s} className={`h-0.5 flex-1 rounded-full transition-all duration-500 ${step >= s ? 'bg-gold' : 'bg-white/10'}`} />
                                     ))}
                                 </div>
                             )}
@@ -177,13 +177,13 @@ export default function BookingButton({ roomName, roomType, size, price, priceNu
                                     </div>
 
                                     {nights > 0 && (
-                                        <div className="bg-amber-400/5 border border-amber-400/15 rounded-xl p-4">
+                                        <div className="bg-gold/5 border border-gold/15 rounded-xl p-4">
                                             <div className="flex justify-between items-center">
                                                 <span className="text-xs text-neutral-400">{price} × {nights} {nights === 1 ? 'night' : 'nights'}</span>
-                                                <span className="font-serif text-lg text-amber-400">₮{totalMNT}</span>
+                                                <span className="font-serif text-lg text-gold">₮{totalMNT}</span>
                                             </div>
                                             <div className="text-right text-[10px] text-neutral-600 mt-0.5">≈ USD {totalUSD}</div>
-                                            <div className="border-t border-white/5 mt-3 pt-3 flex items-center gap-2 text-[10px] text-amber-400/60">
+                                            <div className="border-t border-white/5 mt-3 pt-3 flex items-center gap-2 text-[10px] text-gold/60">
                                                 <span>✓</span>
                                                 <span>Breakfast included · {nights} {nights === 1 ? 'night' : 'nights'}</span>
                                             </div>
@@ -192,7 +192,7 @@ export default function BookingButton({ roomName, roomType, size, price, priceNu
 
                                     <button
                                         onClick={handleNext}
-                                        className="w-full py-3 bg-amber-400 text-black text-xs tracking-[0.25em] uppercase font-medium rounded-lg hover:bg-amber-300 transition-all"
+                                        className="w-full py-3 bg-gold text-forest-black text-xs tracking-[0.25em] uppercase font-medium rounded-lg hover:bg-champagne transition-all"
                                     >
                                         Continue →
                                     </button>
@@ -206,7 +206,7 @@ export default function BookingButton({ roomName, roomType, size, price, priceNu
 
                                     <div className="flex justify-between items-center text-xs bg-white/3 rounded-lg px-4 py-3 border border-white/5">
                                         <span className="text-neutral-500">{roomName} · {nights} {nights === 1 ? 'night' : 'nights'} · {form.guests} {parseInt(form.guests) === 1 ? 'guest' : 'guests'}</span>
-                                        <span className="text-amber-400 font-serif">₮{totalMNT}</span>
+                                        <span className="text-gold font-serif">₮{totalMNT}</span>
                                     </div>
 
                                     <div>
@@ -264,11 +264,11 @@ export default function BookingButton({ roomName, roomType, size, price, priceNu
                                     <div className="flex gap-3 pt-1">
                                         <button
                                             onClick={() => setStep(1)}
-                                            className="flex-1 py-3 border border-white/10 text-neutral-500 text-xs tracking-widest uppercase rounded-lg hover:border-amber-400/30 hover:text-neutral-300 transition-all"
+                                            className="flex-1 py-3 border border-white/10 text-neutral-500 text-xs tracking-widest uppercase rounded-lg hover:border-gold/30 hover:text-neutral-300 transition-all"
                                         >← Back</button>
                                         <button
                                             onClick={handleNext}
-                                            className="flex-[2] py-3 bg-amber-400 text-black text-xs tracking-[0.2em] uppercase font-medium rounded-lg hover:bg-amber-300 transition-all"
+                                            className="flex-[2] py-3 bg-gold text-forest-black text-xs tracking-[0.2em] uppercase font-medium rounded-lg hover:bg-champagne transition-all"
                                         >Confirm Reservation</button>
                                     </div>
                                 </>
@@ -277,12 +277,12 @@ export default function BookingButton({ roomName, roomType, size, price, priceNu
                             {/* STEP 3 — Success */}
                             {step === 3 && (
                                 <div className="text-center py-6 space-y-5">
-                                    <div className="w-16 h-16 rounded-full border border-amber-400/30 bg-amber-400/8 flex items-center justify-center mx-auto">
-                                        <span className="text-amber-400 text-2xl">✓</span>
+                                    <div className="w-16 h-16 rounded-full border border-gold/30 bg-gold/8 flex items-center justify-center mx-auto">
+                                        <span className="text-gold text-2xl">✓</span>
                                     </div>
 
                                     <div>
-                                        <h3 className="font-serif text-2xl text-amber-400 mb-3">Reservation Sent</h3>
+                                        <h3 className="font-serif text-2xl text-gold mb-3">Reservation Sent</h3>
                                         <p className="text-xs text-neutral-500 leading-relaxed max-w-xs mx-auto">
                                             Thank you, <strong className="text-white">{form.name}</strong>. Your request for{' '}
                                             <strong className="text-white">{roomName}</strong> from{' '}
@@ -291,10 +291,10 @@ export default function BookingButton({ roomName, roomType, size, price, priceNu
                                         </p>
                                     </div>
 
-                                    <div className="bg-amber-400/5 border border-amber-400/15 rounded-xl p-4 text-left space-y-2.5 max-w-xs mx-auto w-full">
+                                    <div className="bg-gold/5 border border-gold/15 rounded-xl p-4 text-left space-y-2.5 max-w-xs mx-auto w-full">
                                         <div className="flex justify-between text-xs">
                                             <span className="text-neutral-500">Total</span>
-                                            <span className="text-amber-400 font-serif">₮{totalMNT}</span>
+                                            <span className="text-gold font-serif">₮{totalMNT}</span>
                                         </div>
                                         <div className="flex justify-between text-xs">
                                             <span className="text-neutral-500">Guests</span>
@@ -308,7 +308,7 @@ export default function BookingButton({ roomName, roomType, size, price, priceNu
 
                                     <button
                                         onClick={handleClose}
-                                        className="px-10 py-3 border border-amber-400/50 text-amber-400 text-xs tracking-widest uppercase rounded-full hover:bg-amber-400 hover:text-black transition-all"
+                                        className="px-10 py-3 border border-gold/50 text-gold text-xs tracking-widest uppercase rounded-full hover:bg-gold hover:text-black transition-all"
                                     >
                                         Done
                                     </button>

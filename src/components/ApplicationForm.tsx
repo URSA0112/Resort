@@ -50,10 +50,10 @@ export default function ApplicationForm({ positions }: ApplicationFormProps) {
     if (submitted) {
         return (
             <div className="text-center py-20 px-6 space-y-6">
-                <div className="w-20 h-20 rounded-full border border-amber-400/30 bg-amber-400/8 flex items-center justify-center mx-auto">
-                    <span className="text-amber-400 text-3xl">✓</span>
+                <div className="w-20 h-20 rounded-full border border-gold/30 bg-gold/8 flex items-center justify-center mx-auto">
+                    <span className="text-gold text-3xl">✓</span>
                 </div>
-                <h3 className="font-serif text-3xl text-amber-400">Application Submitted</h3>
+                <h3 className="font-serif text-3xl text-gold">Application Submitted</h3>
                 <p className="text-sm text-neutral-400 leading-relaxed max-w-sm mx-auto">
                     Thank you, <strong className="text-white">{form.name}</strong>. We've received your application for{' '}
                     <strong className="text-white">{form.position}</strong>.<br /><br />
@@ -61,7 +61,7 @@ export default function ApplicationForm({ positions }: ApplicationFormProps) {
                 </p>
                 <button
                     onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', position: '', coverLetter: '', cvFile: null }); }}
-                    className="mt-4 px-8 py-3 border border-amber-400/50 text-amber-400 text-xs tracking-widest uppercase hover:bg-amber-400 hover:text-black transition-all"
+                    className="mt-4 px-8 py-3 border border-gold/50 text-gold text-xs tracking-widest uppercase hover:bg-gold hover:text-forest-black transition-all"
                 >
                     Submit Another
                 </button>
@@ -150,7 +150,7 @@ export default function ApplicationForm({ positions }: ApplicationFormProps) {
 
             <button
                 type="submit"
-                className="w-full py-4 bg-amber-400 text-black text-xs tracking-[0.3em] uppercase font-medium hover:bg-amber-300 transition-all duration-300"
+                className="w-full py-4 bg-gold text-forest-black text-xs tracking-[0.3em] uppercase font-medium hover:bg-champagne transition-all duration-300"
             >
                 Submit Application
             </button>
